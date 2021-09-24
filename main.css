@@ -1,0 +1,684 @@
+/*** MAIN CSS ***/
+/** FOUNDATION - Här gör vi reset m.m. **/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color: #030303;
+}
+
+/** BASE **/
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: #4b4949;
+}
+
+h1 {
+    font-size: 2.0rem; 
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 1.5rem; 
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.0rem; 
+    font-weight: 300;
+}
+
+p, h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.1;
+    color: rgb(248, 255, 249);
+    text-align: center; 
+}
+
+h1,
+h2,
+h3,
+p,
+img {
+    margin-bottom: .6em;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+a {
+    color: var( --primary-color );
+    text-decoration: none;
+}
+
+
+/** MODULE - Här börjar vi med vår layout **/
+
+/** SITE HEADER **/
+
+.site-header {
+    display: grid;
+    
+    grid-template-columns: 1fr 3rem;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        " L B "
+        " M M "
+    ;
+    
+    align-items: center; /* centrera objekten vertikalt i ytorna. */
+    padding: 3rem 1rem 1rem 1rem;
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+
+.site-main {
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #242323,#37393883); 
+}
+
+/** BRAND **/
+.brand {
+    grid-area: L;
+}
+
+.brand-link {
+    display: block;
+    height: 84px;
+    max-width: 70%;
+    }
+
+.brand-link :hover{
+    /* transform: scale(1.2); */
+    /* transition-duration: 0.9s; */
+}
+.brand-link img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    margin: 0;
+    }
+/** SITE NAVIGATION **/
+.site-navigation {
+    grid-area: M;
+    display: none;
+    text-transform: uppercase;
+
+    justify-self: center;
+
+}
+/* Toggle Button */
+.toggle-btn {
+    grid-area: B;
+
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    /* top: -8em;
+    left: 1em; */
+    padding: 0 .5em;
+    background-color: rgb(73, 85, 81);
+    
+    cursor: pointer;
+
+}
+.toggle-btn:hover {
+    transition-duration: 0.5s;
+    background-color: #5e8674;
+    
+}
+
+.toggle-btn .bars,
+.toggle-btn .bars::before,
+.toggle-btn .bars::after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(231, 231, 231);
+    
+}
+.toggle-btn .bars::before,
+.toggle-btn .bars::after {
+    content: '';
+    
+}
+
+.toggle-btn .bars::before {
+    position: relative;
+    top: -10px;
+}
+
+.toggle-btn .bars::after {
+    position: relative;
+    top: 8px;
+}
+
+/* Checkbox */
+.toggle-menu {
+    display: none;
+    
+} 
+.toggle-menu:checked + .site-navigation {
+    display: block;
+    
+}
+
+/*** Meny-knapp ***/
+.button {
+        background-color: gray;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2px 2px;
+        transition-duration: 0.5s;
+        cursor: pointer;
+      }
+
+.button1 {
+        border-radius: 25px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 15px 32px;
+        }
+.button1:hover {
+    background-color: rgb(72, 155, 109);
+    color: rgb(255, 255, 255);
+    
+    
+}
+
+
+
+
+/** Menu **/
+.menu {
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+}
+.menu-item {
+    /* flex-basis: 100%; */
+
+}
+.menu-item a {
+    display: block;
+    text-decoration: none;
+    padding: .5rem 4rem;
+    color:  #64947e;
+    background-color: #1c1c1c;
+    margin: .5rem;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.menu-item.active a {
+    background-color:  #64947e;
+    color: white;
+
+}
+.menu-item a:hover {
+    color: #e8e8e8de;
+    /* background-color: none; */
+    transform: scale(1.30);
+    
+}
+
+
+
+/* HERO */
+.hero {
+    position: relative;
+    
+    height: 6vh;
+    padding: 1vh;
+    background-color: rgb(73, 85, 81);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+    display: flex;
+    justify-content: center; 
+
+   /* align-items: flex-end; /* justera i Y-led */
+}
+.hero.front-page {
+    background-image: url(/images/pexels-chris-f-1283219.jpg)
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 1, 1, 0.5);
+}
+
+.hero .container{ 
+    position: relative;
+    z-index: 1;
+    padding: 10rem;
+    max-width: 800px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(158, 42, 42);
+}
+
+.hero-title {}
+
+.hero-byline {}
+.hero-cta {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 1em 2em;
+    text-decoration: none;
+    
+}
+
+.contact {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/** MENY FÖR MAT **/
+
+.meny {
+    width: 100%;
+    padding: 2rem 5rem;
+    /* background-image: linear-gradient(to right top, #0c0c0c,#33323283);  */
+  background-color: rgb(62, 60, 59);
+
+}
+
+.meny-heading {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 1rem rgb(0, 0, 0);
+    text-transform: uppercase;
+    color:  #b3b5b4;
+    font-weight: 800;
+}
+
+.meny-grid {
+    display: grid;
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-template-columns: repeat(1, 1fr);
+    justify-self: center;
+    /* grid-gap: 2rem; */
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+/*.heading-secondary {
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: rgb(211, 20, 20);
+    text-align: center;
+} */
+
+ .meny-img {/*
+    height: 30%;
+    width: 100%;
+    background-size: cover;
+    background-position: left;
+    background-image: url(/images/menu-pic.jpg);
+*/} 
+
+.meny-container {
+    width: 100%;
+    height: 22rem;
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 2rem rgb(41, 41, 41);
+    transition: all .4s ease;
+
+}
+
+.meny-container:hover {
+    box-shadow: 0 0 4rem #131313;
+    transform: scale(1.01);
+}
+
+.meny-p {
+    font-size: 1.4rem;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+.meny-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    color:  #64947e;
+
+}
+
+
+/*** FOOTER ***/
+.site-footer {
+        background-color: #5e8674;
+        padding: 1.5rem 2rem;
+
+}
+
+.site-footer a {
+    color: rgb(255, 255, 255);
+    font-size: large;
+
+}
+
+/** kolumner med flex **/
+.site-footer .flex-container {
+    display: flex;
+    flex-direction: column;  
+    
+    align-items: center;
+}
+.site-footer .flex-container > div + div { 
+    margin-top: 1em;
+}
+
+
+/*** SOCIALA MEDIER ***/
+.social-links {
+    display: flex;
+    /* margin-left: -1em; */
+
+}
+.social-links a {
+   margin: 1.5em; 
+
+ 
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+
+    
+}
+.social-links i {
+    margin-right: .5em;
+}
+
+.social-links :hover{
+    color: rgb(227, 233, 228);
+    transition-duration: 0.6s;
+    transform: scale(1.50);
+    
+}
+
+.google-map {
+    width: 100%;
+    height: 40vh;
+}
+
+/** FEATURES **/
+.features {
+    padding: 1em 1em 2em;
+}
+
+
+
+
+.flex-container {
+    padding: 15px;
+    margin: 1.5rem;
+}
+ 
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap;*/
+
+}
+.meny .container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+/*** OM OSS ***/
+
+.boxes {
+    display: grid; 
+    flex-direction: column;
+    background-color:rgb(75, 75, 78); 
+    /* justify-content: space-between;
+    align-content: space-between;*/
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "A A"
+    "B B"
+     ;
+
+    gap: 2rem;
+    padding: 1em 1em 3em 2em;
+    justify-content: space-between; 
+    align-content: space-between;
+}
+
+
+.box {
+  display: flex; 
+  flex-direction: column; 
+
+
+  /* height: 100%;
+  width: 100%; */
+}
+
+.box-1 { 
+  background-color:rgb(75, 75, 78);
+ grid-area: A;
+}    
+
+.box-2 {
+  background-color: rgb(75, 75, 78);
+  grid-area: B;
+}
+
+.box-3 {
+ grid-area: C;
+  }
+
+
+
+/*** KONTAKTFORMULÄR ***/
+#formular {
+    min-width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(48, 44, 44);
+    padding: 18px;
+    font-size: 16px;
+    color: rgb(252, 252, 252);
+    }
+    
+    #formular input[type=text],
+    #formular input[type=email] {
+    width: 100%;
+    padding: 10px 5px 10px 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid rgb(161, 157, 157);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    }
+    
+    #formular input[type=submit] {
+    width: 100%;
+    background-color: #5e8674;
+    color: rgba(255,255,255,1.00);
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    }
+    
+    #formular input[type=submit]:hover {
+    filter: brightness(95%);
+   
+    }
+    #formular textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px 5px 10px 10px;
+        margin: 5px 0 15px 0;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 18px;
+        }
+
+    #centerbox {
+            margin: 20px auto 20px auto;
+            padding: 20px 20px 20px 20px; 
+    }
+
+    /* MOBILTELEFON och SMARTPHONE (portrait/stående) */
+    @media only screen and (max-width: 768px){
+    #formular {
+    width: 90%;
+    }
+    }
+/** COSMETIC - Här gör vi unik styling på komponenter **/ 
+
+
+
+/*** NYHETSBREV FORMULÄR ***/
+ form {
+    border: 4px solid #000000;
+  }
+  
+  
+  .container-form {
+    padding: 20px;
+    background-color: #707070;
+  }
+  
+  /* submit button */
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    background-color: rgb(243, 242, 242);
+    
+  }
+  
+  /* checkbox */
+  input[type=checkbox] {
+    margin-top: 20px;
+    
+
+  }
+  
+  /* Style submit button */
+  input[type=submit] {
+    background-color: #3c3d3c;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  } 
+
+
+
+/* Container för dryck */
+.container-articles {
+    display: grid; 
+    flex-direction: column;
+    /* background-color:rgb(75, 75, 78);  */
+    background-image: linear-gradient(to right top, #0c0c0c,#33323283); 
+    /* justify-content: space-between;
+    align-content: space-between; */
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    " A "
+    " B "
+     ;
+
+    gap: 2rem;
+    padding: 2em 1em 1em 2em;
+    float: none;
+}
+
+
+.container-article {
+  display: flex; 
+  flex-direction: column; 
+}
+
+.container-article-1 { 
+ grid-area: A;
+ padding: 0.3em 2em 2em 2em;
+}  
+
+.container-article-2 { 
+   grid-area: B;
+   padding: 0.3em 2em 2em 2em;
+}  

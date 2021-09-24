@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers & Beer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Grund-CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Tablet-CSS -->
+    <link rel="stylesheet" media="(min-width:768px)" href="./css/tablet.css">
+    <!-- Laptop-CSS -->
+    <link rel="stylesheet" media="(min-width:992px)" href="./css/laptop.css">
+    <!-- Desktop-CSS -->
+    <link rel="stylesheet" media="(min-width:1200px)" href="./css/desktop.css">
+    <style>
+    /* Intern CSS */
+    </style>
+</head>
+<body>
+    <div class="site">
+
+        <header class="site-header">
+            <div class="brand">
+                <a class="brand-link" href="index.html"><img src="images/Burgers 'n Beers.png" alt=""></a>
+            </div>
+            <input type="checkbox" id="toggle-menu" class="toggle-menu">
+            <nav class="site-navigation">
+                <ul class="menu">
+                    
+                    <li class="menu-item">
+                        <a href="index.html">Hem</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="meny.html">Meny</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="dryck.html">Dryck</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="om-oss.html">Om oss</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <label class="toggle-btn" for="toggle-menu">
+                <span class="bars"></span>
+            </label>
+        </header>
+
+    
+        <main class="site-main">
+
+                <div class="container">
+
+                    <div class="image">
+                        <img src="images/pexels-suvan-chowdhury-144428.jpg">
+                    </div>
+                    </div>
+
+                    <main class="site-main">
+                        <header class="hero"><h2>Kontakt</h2></header>
+            
+                        <section class="features">
+                            <h1>Boka bord?</h1>
+                            <div class="flex-container">
+                                <article id="card-1" class="card">
+                                    <p>Vi har alltid drop in-platser, men är ni ett stort sällskap får ni gärna boka i förhand. 
+                                        <br> Skriv i datum, tid och antal personer så återkommer vi med en bekräftelse så fort vi kan.</p>
+                                </article>
+                            </div> 
+                </div>
+            </section>
+
+        <div id="centerbox">
+            <form name="formular" id="formular" method="post" action="" >
+                
+                <label for="fnamn">Namn:</label><br />
+                <input type="text" name="fnamn" id="fnamn" placeholder="Ditt namn"><br>
+                
+                <label for="epost">E-postadress:</label><br>
+                <input type="email" name="email" id="email" placeholder="Din e-postadress">
+                <br>
+                <label for="textarea">Meddelande:</label><br>
+                <textarea name="meddelande" id="meddelande"></textarea><br>
+                
+                <input type="submit" name="skicka" id="skicka" value="Skicka" />
+                      
+                </form></div>
+
+            <section class="map">
+            <iframe 
+                class="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2130.5837275649956!2d12.937778103416266!3d57.723528390753536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465aa0b245c66aa5%3A0xcafd49ed236af32d!2sAll%C3%A9gatan%2012%2C%20503%2032%20Bor%C3%A5s!5e0!3m2!1ssv!2sse!4v1610397526071!5m2!1ssv!2sse" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+                width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+       
+        <footer class="site-footer">
+
+            <div class="container flex-container">
+
+                <div class="contact">
+                    <a href="index.html"> 
+                    <h2>Burgers & Beers</h2></a>
+                    <h3>Allégatan 12<br>
+                     123 45 Borås</h3>
+
+                     <p><i class="fas fa-phone-alt"></i></i></i> <a href="tel:+4633123456">+46 33-123 456</a></p>
+
+                     <p><i class="fas fa-envelope"></i> <a href="mailto:info@burgersnbeers.se">info@burgersnbeers.se</a></p>
+                </div>
+
+            
+                <div class="socials">
+                    <ul class="social-links">
+                        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://messenger.com"><i class="fab fa-facebook-messenger"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.tripadvisor.se/Restaurants"><i class="fab fa-tripadvisor"></i></a>
+                    </ul>
+                </div>
+                <div>
+                   <h3>ÖPPETTIDER</h3>
+                    <p> Tisdag - torsdag: 17.00 - 01.00 <br>
+                     Fredag - söndag: 17.00 - 02.00</p>
+            </div>
+
+        </footer>
+</body>
+</html>

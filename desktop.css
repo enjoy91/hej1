@@ -1,0 +1,14 @@
+/*** DESKTOP CSS ***/
+/* html {
+    font-size: 22px;
+} */
+
+.boxes {
+    display: grid; 
+    flex-direction: row;
+    gap: 8rem;
+}
+
+.meny-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
